@@ -1,6 +1,8 @@
 import streamlit 
 import pandas
 import requests
+import snowflake.connector
+from urllib.error import URLError
 
 streamlit.header('Breakfast Menu')
 streamlit.text('🥣 Omega 3 & Blueberry Oatmeal')
@@ -33,7 +35,7 @@ streamlit.write('The user entered ', fruit_choice)
 
 #don't run anything past here while we troubleshoot
 streamlit.stop()
-import snowflake.connector
+
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
