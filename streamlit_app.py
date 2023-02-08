@@ -28,7 +28,7 @@ def get_fruityvice_data(this_fruit_choice):
        #It will add headers or column names  
        fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())     
        #It will show that data in a table
-       streamlit.dataframe(fruityvice_normalized) 
+       return fruityvice_normalized 
 
         
 streamlit.header("Fruityvice Fruit Advice!")
